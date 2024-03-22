@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0db4c44db2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Style/stylehome.css"/>
+    <link rel="script" href="tarefas.js" as="script"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Tarefas</title>
+</head>
+
+<header>
+
+    <h1>Lista de Tarefas</h1>
+  
+    <ul class="bolao">
+      <a href="https://www.instagram.com/joaopedro_pn/" target="_blank"><li class="bolas" href="#"><i class="fab fa-instagram"></i></li></a>
+      <a href="https://www.linkedin.com/in/joão-pedro-patrício-do-nascimento-5b042a180/" target="_blank"><li class="bolas" href="#"><i class="fab fa-linkedin-in"></i></li></a>
+    </ul>
+  
+  </header>
+
+<body>
+
+    <div class="cont">
+        <div class="topo">
+            <textarea type="text" id="novatarefa" placeholder="Adicione uma tarefa"></textarea>
+            <button id="addtarefa">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+
+        <ul id="listatarefa">
+        </ul>
+    </div>
+
+
+    <div id="janelaedicao">
+        <button id="fechar">
+            <i class="fa fa-remove fa-2x"></i>
+        </button>
+        <h2 id="idtarefaedicao"></h2>
+        <hr>
+        <form>
+            <div class="linha">
+                <label for="nome">Te agiliza Negooo!!!</label>
+                <textarea type="text" id="tarefanomeedicao"></textarea>
+            </div>
+            <div class="linha">
+                <button id="atualizar">Salvar</button>
+            </div>
+        </form>
+    </div>
+    <div id="janelaedicaofundo"></div>
+
+
+
+    <div id ="janelaexcluir">
+        <button id="fechar2">
+            <i class="fa fa-remove fa-2x"></i>
+        </button>
+        <h2> Tem certeza que deseja excluir?</h2>
+        <button id="apagar">Excluir</button>
+    </div>
+    <div id="janelaexcluirfundo"></div>
+
+    <footer>
+        <div class="footergeneral">
+            <p> Design by<a class="footerinfo" target="_blank" href="https://www.joaopedropn.com.br/"> João Pedro</a></p>
+
+        </div>
+    </footer>
+
+    <script src="tarefas.js"></script>
+    
+</body>
+</html>
