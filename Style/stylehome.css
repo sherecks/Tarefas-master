@@ -1,83 +1,56 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 * {
   font-family: "Fredoka One", cursive;
-  margin: 0 auto;
+  margin: 10px;
 }
 
 body {
   background-color: #0093E9;
   text-align: center;
-  margin: 0px;
+  margin: 0px auto;
 }
 
 header {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-top: 10px;
   margin: 0 auto;
   position: relative;
 }
 
-.bolao {
-  display: flex;
+.logo {
+  width: 300px;
 }
 
-.bolao .bolas {
-  display: block;
-  color: #272262;
-  font-size: 30px;
-  width: 45px;
-  height: 45px;
-  background-color: rgba(255, 255, 255, 0.5019607843);
-  line-height: 45px;
-  border-radius: 50%;
-  margin: 2px 4px;
-  transition: all 0.2s ease;
+.icon {
+  width: 200px;
 }
 
-.bolao .bolas:hover {
-  opacity: 0.7;
-  background: white;
-  width: 50px;
-  height: 50px;
-  display: block;
-  line-height: 50px;
-  border-radius: 50%;
-  margin: 2px 6px;
-  transition: all 0.2s ease;
-}
-
-h1 {
-  color: #272262;
-  padding: 5px;
+.footerIcon {
+  width: 500px;
 }
 
 .cont {
   background-color: rgba(255, 255, 255, 0.5019607843);
+  background-image: url("../fundocontact.png");
   box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.3764705882);
   margin: 10px auto;
   border-radius: 10px;
   padding: 5vw;
-  width: 90%;
+  width: 80%;
   max-width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-}
-
-li {
-  display: flex;
-  justify-content: space-between; /* Separa o texto dos botões */
-  flex-wrap: wrap; /* Permite que os itens da lista se ajustem conforme necessário */
-  word-wrap: break-word; /* Quebra palavras longas */
-  max-width: 100%; /* Limita a largura máxima */
 }
 
 .texto {
   flex-grow: 1;
   margin-right: 10px;
   font-size: 22px;
+  background: #272262;
+  color: white;
+  border: none;
 }
 
 .topo {
@@ -97,6 +70,14 @@ li {
   background: #272262;
   color: white;
   border: none;
+}
+
+.topo textarea::-moz-placeholder {
+  color: white;
+}
+
+.topo textarea::placeholder {
+  color: white;
 }
 
 .topo input::-moz-placeholder {
@@ -152,17 +133,11 @@ i {
 .acao {
   border-radius: 10px;
   color: white;
-  background: rgb(66, 60, 60);
   width: 68px;
-  height: 38px;
   cursor: pointer;
   border: none;
   margin: 4px;
-  white-space: nowrap;
-}
-
-.acao:hover {
-  background: rgb(73, 67, 67);
+  background: none;
 }
 
 #janelaedicao {
@@ -171,7 +146,6 @@ i {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  background: white;
   width: 650px;
   border-radius: 10px;
   display: none;
@@ -285,13 +259,18 @@ form {
 #janelaexcluirfundo {
   position: fixed;
   top: 0;
-  background-color: #272262;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background-color: rgba(95, 116, 184, 0.226);
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.384);
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0.8;
+  opacity: 0.6;
   display: none;
   z-index: 100;
+  border-radius: 10px;
 }
 
 #janelaexcluirfundo.abrir {
@@ -327,14 +306,4 @@ h2 {
   font-size: 20px;
   outline: none;
   border: none;
-}
-
-.footergeneral {
-  font-size: 25px;
-  color: #272262;
-}
-
-.footerinfo {
-  text-decoration: none;
-  color: #463f8b;
 }/*# sourceMappingURL=stylehome.css.map */

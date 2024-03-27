@@ -1,12 +1,7 @@
 let novatarefa = document.getElementById('novatarefa');
 let addtarefa = document.getElementById('addtarefa');
 let listatarefa = document.getElementById('listatarefa');
-let janelaedicao = document.getElementById('janelaedicao');
 let atualizar = document.getElementById('atualizar');
-let fechar = document.getElementById('fechar');
-let janelaedicaofundo = document.getElementById('janelaedicaofundo');
-let idtarefaedicao = document.getElementById('idtarefaedicao');
-let tarefanomeedicao = document.getElementById('tarefanomeedicao');
 let janelaexcluir = document.getElementById('janelaexcluir');
 let janelaexcluirfundo = document.getElementById("janelaexcluirfundo");
 let apagar = document.getElementById("apagar");
@@ -29,37 +24,12 @@ fechar2.addEventListener('click',(e) =>{
     limpar();
 });
 
-fechar.addEventListener('click',(e) => {
-    alternar();
-});
-
 addtarefa.addEventListener('click',(e) => {
     let tarefa = {
         nome: novatarefa.value,
         id: gerarid(),
     }
     addtarefas(tarefa);
-
-});
-
-atualizar.addEventListener('click', (e) =>{
-    e.preventDefault();
-
-    let idtarefa = idtarefaedicao.innerHTML.replace('#','');
-    let tarefa = {
-        nome: tarefanomeedicao.value,
-        id: idtarefa
-    }
-
-    let tarefaatual = document.getElementById(''+idtarefa+'');
-
-    if(tarefaatual){
-        let li = tagli(tarefa);
-        listatarefa.replaceChild(li, tarefaatual);
-        alternar();
-    }else{
-        alert('Elemento não encontrado');
-    }
 
 });
 
@@ -104,19 +74,6 @@ function tagli(tarefa) {
     novatarefa.value = ''; // Limpa o valor do campo de entrada de texto
 }
 
-
-function editar(idtarefa, textoTarefa) {
-    let li = document.getElementById('' + idtarefa + '');
-    if(li){
-        idtarefaedicao.innerHTML = '#' + idtarefa;
-        tarefanomeedicao.value = textoTarefa;
-        alternar();
-    }else{
-        alert('Elemento não encontrado');
-    }
-    
-}
-
 function excluir(idtarefa) {
 
     let li = document.getElementById('' + idtarefa + '');
@@ -127,11 +84,6 @@ function excluir(idtarefa) {
         alert('Elemento não encontrado');
     }
     
-}
-
-function alternar() {
-    janelaedicao.classList.toggle('abrir');
-    janelaedicaofundo.classList.toggle('abrir');
 }
 
 function limpar() {
